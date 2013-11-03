@@ -1,7 +1,7 @@
 <nav class="menu">
-    <a class="menu_item{if:(sub_page:=links)} cur{:fi}" href="{siteurl:}links/">ссылки</a>
-    <a class="menu_item{if:(sub_page:=friends)} cur{:fi}" href="{siteurl:}friends/">друзья</a>
-    <a class="menu_item{if:(sub_page:=settings)} cur{:fi}" href="{siteurl:}settings/">настройки</a>
+    <a class="menu_item{if:(sub_page:=links)} _cur{:fi}" href="{siteurl:}links/">ссылки</a>
+    <a class="menu_item{if:(sub_page:=friends)} _cur{:fi}" href="{siteurl:}friends/">друзья</a>
+    <a class="menu_item{if:(sub_page:=settings)} _cur{:fi}" href="{siteurl:}settings/">настройки</a>
 </nav>
 
 {if:(sub_page:=links)}{+profile/links:}{:fi}

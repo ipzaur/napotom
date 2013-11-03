@@ -1,6 +1,4 @@
 <?php
-echo 1;
-/*
 mb_language("ru");
 mb_internal_encoding("UTF-8");
 require_once '../config.php';
@@ -36,3 +34,4 @@ if ($main_page == 'profile') {
 }
 
 $engine->tpl->render();
+

@@ -1,10 +1,24 @@
 /* СТИЛИ НА ТЭГИ */
-body{
-    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA5gAAAABBAMAAABJZxyYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRFCjUMCjUMCjUMCjUMCjUMCjUMCjUMCjUMCjUMNGUuNGYvNWkxNmwzN3E3OHc8On5BnABFYwAAAAl0Uk5TBQ8eMkxqjbW/fJlTawAAAB9JREFUGBljYFR2Te9/e3rlzFEwZMGsPfd+lIUYCQAAv6YRZIJcnAgAAAAASUVORK5CYII=') center 0 repeat-y #384e39;
+body {
+    position: relative;
+    background-color: #384e39;
     font:14px Arial;
     color:white;
     margin:0;
     padding:0;
+}
+body:before {
+    position: fixed;
+    content: "";
+    width: 900px;
+    bottom: 0;
+    top: 0;
+    left: 50%;
+    margin-left: -450px;
+    background-color: #34652e;
+    z-index: -1;
+    border-left: 1px solid #0e4B0e;
+    border-right: 1px solid #0e4B0e;
 }
 p,h1,h2,h3,input,label,button,form,div,a{
     margin:0;
@@ -22,8 +36,6 @@ button{
     font-family:Verdana;
     font-size:14px;
     cursor:pointer;
-    box-shadow:0 0 3px 0 #042806;
-    border-radius:4px;
 }
 button:hover{
     background-color:#1b9819;
@@ -38,8 +50,7 @@ input{
     padding:2px 4px;
     font-family:Verdana;
     font-size:14px;
-    box-shadow:1px 1px 2px 0 #184111 inset;
-    border-radius:4px;
+    box-shadow: 0 1px 2px 0 #184111 inset;
 }
 input:-moz-placeholder{
   color:gray;
@@ -95,28 +106,22 @@ a:hover{
 
 /* главное меню */
 [class|="menu"]{
-    height:65px;
-    background-color:#55a645;
-    border:1px solid #1f5421;
-    padding:14px 16px 0;
-    box-shadow:1px 1px 3px 0 #173c19 inset;
-    border-radius:10px;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+    background-color: #55a645;
+    padding: 14px 16px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
-.menu_item{
-    display:block;
-    float:left;
-    margin-left:20px;
-    font-size:20px;
-    color:#cefcd2;
-    padding:4px 16px 6px;
-    border-radius:8px;
-}
-.menu_item:first-child{margin-left:0;}
-.menu_item.cur{
+.menu_item {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #0d3e0c;
+    padding: 4px 16px 6px;
     text-decoration:none;
+}
+.menu_item:first-child {margin-left: 0;}
+.menu_item._cur{
     color:white;
     background-color:#0d3e0c;
 }
@@ -393,14 +398,13 @@ a:hover{
 
 /* редактирование ссылки */
 .link_edit{
-    background-color:#55a645;
-    border:1px solid #1f5421;
-    padding:14px 20px 18px;
-    margin-bottom:10px;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    border-radius:10px;
+    background-color: #55a645;
+    border: 1px solid #1f5421;
+    padding: 14px 20px 18px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .link_edit_url{
     width:100%;
@@ -466,17 +470,16 @@ a:hover{
 }
 .friend_input{display:none;}
 .friend{
-    cursor:pointer;
-    background-color:#41753e;
-    color:#aefb95;
-    display:inline-block;
-    font-weight:bold;
-    height:80px;
-    margin:10px 15px 0 0;
-    width:186px;
-    padding:10px;
-    opacity:0.8;
-    border-radius:6px;
+    cursor: pointer;
+    background-color: #41753e;
+    color: #aefb95;
+    display: inline-block;
+    font-weight: bold;
+    height: 80px;
+    margin: 10px 15px 0 0;
+    width: 186px;
+    padding: 10px;
+    opacity: 0.8;
 }
 .friend:nth-child(6n){margin-right:0;}
 .friend:hover{
